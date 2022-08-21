@@ -8,7 +8,7 @@
 
 const Stack = (function() {
     function Stack(array = []) {
-        if(!array.isArray(array)) {
+        if(!Array.isArray(array)) {
             throw new TypeError(`${array} is not an array`);
         }
         this.array = array;
@@ -33,3 +33,27 @@ console.log(stack.entries());
 
 stack.push(3);
 console.log(stack.entries());
+
+// stack class
+
+class Stack {
+    #array;
+
+    constructor(array = []) {
+        if(!Array.isArray(array)) {
+            throw new TypeError(`${array} is not Array`);
+        }
+        this.#array = array;
+    }
+
+    push(value) {
+        return this.#array.push(value);
+    }
+    pop() {
+        return this.#array.pop();
+    }
+    entries() {
+        return [...this.#array];
+    }
+}
+
