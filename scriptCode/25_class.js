@@ -34,10 +34,12 @@ class Person_class {
     }
 }
 
-const person1 = new Person_function('최재혁');
-person1.sayHi();
-Person_function.sayHello();
-
+// const person1 = new Person_function('최재혁');
+// person1.sayHi();
+// Person_function.sayHello();
+//
 const person2 = new Person_class('나병호');
-person2.sayHi();
-Person_class.sayHello();
+// person2.sayHi();
+// Person_class.sayHello();
+person2.__proto__.constructor.sayHello();
+
